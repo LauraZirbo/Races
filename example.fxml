@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="466.0" prefWidth="579.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.ui">
+    <children>
+        <TabPane prefHeight="470.0" prefWidth="967.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Add Race">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Text fx:id="ErrorRace_tf" layoutX="248.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="69.0" />
+                                <Label layoutX="14.0" layoutY="64.0" text="ID:" />
+                                <TextField fx:id="id_tf" layoutX="45.0" layoutY="60.0" prefHeight="26.0" prefWidth="88.0" />
+                                <Label layoutX="173.0" layoutY="66.0" prefHeight="17.0" prefWidth="68.0" text="Race name:" />
+                                <TextField fx:id="name_tf" layoutX="264.0" layoutY="61.0" prefHeight="27.0" prefWidth="107.0" />
+                                <Label layoutX="433.0" layoutY="66.0" text="Type:" />
+                                <TextField fx:id="Racetype_tf" layoutX="499.0" layoutY="60.0" prefHeight="26.0" prefWidth="114.0" />
+                                <Label layoutX="722.0" layoutY="66.0" prefHeight="17.0" prefWidth="43.0" text="Date:" />
+                                <TextField fx:id="date_tf" layoutX="765.0" layoutY="60.0" prefHeight="26.0" prefWidth="114.0" />
+                                <Label layoutX="72.0" layoutY="124.0" text="Distance:" />
+                                <TextField fx:id="distance_tf" layoutX="143.0" layoutY="120.0" prefHeight="26.0" prefWidth="129.0" />
+                                <Button layoutX="429.0" layoutY="120.0" mnemonicParsing="false" onAction="#addRace" text="Add" />
+                                <Button layoutX="581.0" layoutY="120.0" mnemonicParsing="false" onAction="#updateRace" text="Update" />
+                                <Button layoutX="746.0" layoutY="120.0" mnemonicParsing="false" onAction="#deleteRace" text="Delete" />
+                                <Label layoutX="30.0" layoutY="190.0" text="Races in the database" />
+                                <TableView fx:id="RaceTableView" layoutY="208.0" prefHeight="200.0" prefWidth="956.0">
+                                    <columns>
+                                        <TableColumn fx:id="IdCol" prefWidth="75.0" text="ID" />
+                                        <TableColumn fx:id="NameCol" prefWidth="236.0" text="Race name" />
+                                        <TableColumn fx:id="racetypeCol" prefWidth="198.0" text="Type" />
+                                        <TableColumn fx:id="dateCol" prefWidth="177.0" text="Date" />
+                                        <TableColumn fx:id="distanceCol" prefWidth="116.0" text="Distance" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text=" Add Registration">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Text fx:id="ErrorRegistration_tf" layoutX="248.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="69.0" />
+                                <Label layoutX="18.0" layoutY="66.0" text="ID:" />
+                                <TextField fx:id="Rid_tf" layoutX="66.0" layoutY="62.0" prefHeight="26.0" prefWidth="88.0" />
+                                <Label layoutX="211.0" layoutY="65.0" prefHeight="17.0" prefWidth="45.0" text="Name:" />
+                                <TextField fx:id="Rname_tf" layoutX="273.0" layoutY="60.0" prefHeight="27.0" prefWidth="107.0" />
+                                <Label layoutX="473.0" layoutY="66.0" text="Phone number: " />
+                                <TextField fx:id="RphNr_tf" layoutX="565.0" layoutY="62.0" prefHeight="26.0" prefWidth="114.0" />
+                                <Label layoutX="14.0" layoutY="123.0" prefHeight="17.0" prefWidth="55.0" text="Address:" />
+                                <TextField fx:id="Raddress_tf" layoutX="69.0" layoutY="119.0" prefHeight="26.0" prefWidth="114.0" />
+                                <Label layoutX="224.0" layoutY="124.0" prefHeight="17.0" prefWidth="31.0" text="Age:" />
+                                <TextField fx:id="Rage_tf" layoutX="273.0" layoutY="119.0" prefHeight="26.0" prefWidth="129.0" />
+                                <Label layoutX="516.0" layoutY="124.0" prefHeight="17.0" prefWidth="31.0" text="Race:" />
+                                <TextField fx:id="Rrace_tf" layoutX="565.0" layoutY="119.0" prefHeight="26.0" prefWidth="129.0" />
+                                <Button layoutX="828.0" layoutY="61.0" mnemonicParsing="false" onAction="#addRegistration" text="Add" />
+                                <Button layoutX="762.0" layoutY="119.0" mnemonicParsing="false" onAction="#updateRegistration" text="Update" />
+                                <Button layoutX="882.0" layoutY="120.0" mnemonicParsing="false" onAction="#deleteRegistration" text="Delete" />
+                                <Label layoutX="30.0" layoutY="190.0" text="Registrations in the database: " />
+                                <TableView fx:id="RTableView" layoutY="208.0" prefHeight="200.0" prefWidth="967.0">
+                                    <columns>
+                                        <TableColumn fx:id="RIdCol" prefWidth="75.0" text="ID" />
+                                        <TableColumn fx:id="RegNameCol" prefWidth="96.0" text="Name" />
+                                        <TableColumn fx:id="phoneNrCol" prefWidth="169.0" text="Phone number" />
+                                        <TableColumn fx:id="addressCol" prefWidth="174.0" text="Address" />
+                                        <TableColumn fx:id="ageCol" prefWidth="72.0" text="Age" />
+                                        <TableColumn fx:id="raceCol" prefWidth="380.0" text="Race" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
